@@ -23,7 +23,6 @@ function displayBooks() {
     myLibrary.forEach(book => {
         const row = document.createElement('tr');
         row.setAttribute('data-id', book.id);
-        // const idColumn = document.createElement('td');
         const titleColumn = document.createElement('td');
         const authorColumn = document.createElement('td');
         const pagesColumn = document.createElement('td');
@@ -31,15 +30,14 @@ function displayBooks() {
         const readColumn = document.createElement('td');
         const removeButton = document.createElement('button');
         const viewButton = document.createElement('button');
-        // idColumn.textContent = book.id;
         titleColumn.textContent = book.title;
         authorColumn.textContent = book.author;
         pagesColumn.textContent = book.pages;
         readColumn.textContent = book.isRead;
         removeButton.textContent = 'Remove';
-        viewButton.textContent = 'View';
+        viewButton.textContent = 'Read';
         removeButton.setAttribute('class', 'removeBtn');
-        viewButton.setAttribute('class', 'viewBtn');
+        viewButton.setAttribute('class', 'readBtn');
         actionsColumn.appendChild(removeButton);
         actionsColumn.appendChild(viewButton);
         removeButton.addEventListener("click", () => {
@@ -53,7 +51,6 @@ function displayBooks() {
             book.read();
             displayBooks();
         });
-        // row.appendChild(idColumn);
         row.appendChild(titleColumn);
         row.appendChild(authorColumn);
         row.appendChild(pagesColumn);
@@ -81,9 +78,4 @@ saveBtn.addEventListener("click", (e) => {
     addBookToLibrary(title, author, pages);
     displayBooks();
     bookDialog.close();
-})
-
-
-
-//addBookToLibrary("book", "author", 50);
-//displayBooks();
+});
