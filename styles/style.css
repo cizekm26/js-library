@@ -1,0 +1,52 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+table, th, td {
+    border: 1px solid;
+    padding: 10px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    background-color: green;
+}
+
+.removeBtn {
+    background-color: red;
+    margin-right: 10px;
+}
+
+.viewBtn {
+    background-color: blue;
+}
+
+#bookDialog {
+    padding: 20px;
+}
+
+form{
+    display: grid;
+    grid-template-columns: 50px 200px;
+    gap: 10px;
+}
+
+#saveBtn, form h2 {
+    grid-column: 1 / span 2;
+    text-align: center;
+    padding: 0;
+}
+
+#saveBtn {
+    height: 30px;
+}

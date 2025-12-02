@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/script.js" defer></script>
+    <link href="styles/style.css" rel="stylesheet"/>
+</head>
+<body>
+    <table>
+        <thead>
+            <th>Title</th>
+            <th>Pages</th>
+            <th>Author</th>
+            <th>Read</th>
+            <th></th>
+        </thead>
+        <tbody id="js-table">
+        </tbody>
+    </table>
+    <button id="addBtn">Add book</button>
+    <dialog id="bookDialog">
+        <form>
+            <h2>Add book</h2>
+            <label for="bookTitle">Title:</label>
+            <input id="bookTitle" name="title"/>
+            <label for="bookPages">Pages:</label>
+            <input id="bookPages" name="pages"/>
+            <label for="bookAuthor">Author:</label>
+            <input id="bookAuthor" name="author"/>
+            <button id="saveBtn">Save</button>
+        </form>
+    </dialog>
+</body>
+</html>
